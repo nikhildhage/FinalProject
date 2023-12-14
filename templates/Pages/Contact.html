@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=main, initial-scale=1.0" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+  <link rel="stylesheet" href="../css/custom.css">
+  <link rel="stylesheet" href="../css/form.css" />
+  <title>Contact</title>
+</head>
+
+<body>
+  <div class="wrapperForm">
+    <div class="banner">
+      <h1 class="RestaurantName">Restaurant</h1>
+    </div>
+
+    <!-- Navigation Bar-->
+    <nav class="navbar navbar-expand-mid navbar-expand-lg navbar-light">
+      <button data-toggle="collapse" data-target="#menu" type="button">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="Menus.html">Menus</a></li>
+          <li class="nav-item"><a class="nav-link" href="Resservations.html">Reservations</a></li>
+          <li class="nav-item"><a class="nav-link" href="Locations.html">Locations</a></li>
+          <li class="nav-item"><a class="nav-link" href="Contact.html">Contact us</a></li>
+          <li class="nav-item"><a class="nav-link" href="GiftCard.html">Gift Cards</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <form action="" class="form" id="form">
+      <h1 id="heading">Contact Us</h1><br />
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <label for="FirstName">FirstName: </label>
+            <input type="text" name="FirstName" value="" id="FirstName" class="form-control" />
+          </div>
+        </div>
+
+        <div class="col">
+          <label for="LastName">LastName: </label>
+          <input type="text" name="LastName" value="" id="LastName" class="form-control" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="Email">Email: </label>
+        <input type="email" name="Email" value="" id="Email" class="form-control" />
+      </div>
+
+      <div class="form-group">
+        <label for="PhoneNumber">Phone: </label>
+        <input type="tel" name="PhoneNumber" value="" id="PhoneNumber" class="form-control" />
+      </div>
+
+      <div class="form-group">
+        <label for="ReservationDate">Date: </label>
+        <input type="date" name="ReservationDate" value="" id="ReservationDate" class="form-control" />
+      </div>
+
+      <div class="form-group">
+        <textarea name="msg" placeholder="Notes" id="textArea" cols="55" rows="10"></textarea>
+
+        <p id="notes">
+          *Please book your reservation at least a week in advance. <br />Late
+          submissions are not accepted. <br />You will receive an email with
+          in 24 hours after we have proccessed your rservation.
+        </p>
+      </div>
+
+      <div class="form-group">
+        <button class="btn-warning" id="resetBtn">Reset</button>
+        <button class="btn-primary" type="submit" id="submitBtn">Submiut</button>
+      </div>
+    </form>
+
+    <footer id="footer"></footer>
+  </div>
+
+  <!-- Jquery first , then Popper JS , then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
