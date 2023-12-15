@@ -1,0 +1,77 @@
+*{
+    margin:0 ;
+    padding:0;
+}
+
+
+.wrapper{
+    widows: 100vw;
+    height: 100vh;
+}
+
+.mainContent{
+    position: relative;
+    padding: 300px;
+}
+
+.heroImgContainer{
+    width: 100vw;
+    height: 100vh;
+}
+
+#landingImg{
+    width: 100%;
+    height: 100%;
+}
+
+
+.slogan{
+    position: absolute;
+    z-index: 2;
+    font-size: 3em;
+    color:white;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 7em;
+    margin-left: 20em;
+}
+
+#orderNowBtn{
+    background-color: red;
+    position:absolute;
+    z-index: 2;
+    color: white;
+    font-size: 2em;
+    font-weight: 600;
+    margin-top: 16em;
+    margin-left: 34em;
+    width: 200px;
+    
+}
+
+#hideReviewsBtn{
+    background: red;
+    width: 200px;
+    color: white;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+.userReviews img{
+    height:680px;
+}
+
+.footer{
+    padding: 150px;
+    background-color:orange;
+
+}
+
+
+
+
+
+
+
+
+

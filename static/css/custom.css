@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.banner{
+    background-image: url("../Images/BannerBackground.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw; 
+    height: 200px;
+}
+
+.RestaurantName{
+    color:white;
+    font-size: 2em;
+    font-style: italic;
+    text-align: center;
+}
+
+
+.navbar{
+    background-color: orange;
+}
+
+
+
+
+.navbar-nav li{
+    margin-left: 20px;
+    margin-right:20px;
+}
+
+.navbar-nav li a{
+    color: white;
+    font-size: 2em;
+    font-weight: 300;
+}
+
+.navbar-nav li a::hover{
+    color: white;
+}
+
+
+
+#footer{
+    margin-top: 30px;
+    padding-bottom: 130px;
+    background-color: orange;
+}
