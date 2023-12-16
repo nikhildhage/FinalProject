@@ -1,43 +1,45 @@
 {% extends 'base.html' %}
-{% load static  %}
+{% load static %}
 {% block customcss %}
     <link rel="stylesheet" href="{% static '/css/index.css' %}" type="text/css">
 {% endblock %}
 {% block content %}
-    <!-- Image-container-->
+    <!-- Landing Image-container-->
     <div class="heroImgContainer">
         <p class="slogan">Eat Fresh Today<br>Live longer Tomarrow</p>
         <a id="orderNowBtn" class="btn btn-default" href="{% url 'menu' %}">Order Now</a>
-        <img id="landingImg" src="Images/SeafoodHero.png" alt="A plate of seafood">
+        <img id="landingImg" src="{% static 'Images/SeafoodHero.png' %}" alt="A plate of seafood">
     </div>
-
     <!-- Main content-->
     <div class="mainContent">
+        <!--User Reviews -->
         <div id="userReviews" class="card-deck userReviews">
+            <!--User Review 1 Card-->
             <div class="card">
-                <img clas="card-img-top img-fluid" src="./Images/userReview1.png" alt="">
+                <img id="landingImg" src="{% static 'Images/userReview1.png' %}" alt="A plate of seafood">
                 <div class="card-body">
                     <p class="card-text">" The food Here is very fresh and healthy.<br> The best
                         ingredients were used.<br> I love the Burgers "</p>
                 </div>
             </div>
-
+            <!--User Review 2 Card-->
             <div class="card">
-                <img class="card-img-top img-fluid" src="./Images/userReview2.png" alt="">
+                <img class="card-img-top img-fluid" src="{% static 'Images/userReview2.png' %}"" alt="">
                 <div class="card-body">
                     <p class="card-text">I love the fish. The different types fish are delious<br> well worth the
-                        price.</p>
+                        price.
+                    </p>
                 </div>
             </div>
-
+            <!--User Review 3 Card-->
             <div class="card">
-                <img class="card-img-top img-fluid" src="./Images/userReview3.png" alt="">
+                <img class="card-img-top img-fluid" src="{% static 'Images/userReview3.png' %}" alt="">
                 <div class="card-body">
                     <p class="card-text">I love salads</p>
                 </div>
             </div>
         </div>
-
+        <!-- Toggle Button to hide User Reviews  -->
         <button id="hideReviewsBtn" class="btn btn-default ">Hide</button>
     </div>
 {% endblock %}
