@@ -31,7 +31,7 @@ header{
 
 .cardArea section div {
     position: relative;
-    background-image: url("../Images/SeasideRestaraunt.png");
+    background-image: url("SeasideRestaraunt.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
