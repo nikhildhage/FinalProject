@@ -11,10 +11,10 @@
 
 
 #headerImg{
-    width: 1auto;
+    width: auto;
     height: 200px;
     padding-bottom: 100px;
-    background-image: url("GiftCardsImg2.png");
+    background-image: url("../Images/GiftCardsImg2.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
