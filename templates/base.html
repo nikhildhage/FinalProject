@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta Tags-->
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>My Restaurant</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" type="text/css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"
+    >
+    <link rel="stylesheet" href="{% static '/css/app.css' %}" type="text/css">
+   {% block customcss %}
+   {% endblock %}
+</head>
+<body>
+<!-- Page Container-->
+<div class="wrapper">
+
+    <!-- Banner-->
+    <div class="banner">
+        <h1 class="RestaurantName">Restaurant</h1>
+    </div>
+
+    <!-- Navigation Bar-->
+    <nav class="navbar navbar-expand-mid navbar-expand-lg navbar-light">
+        <button class="close" data-toggle="collapse" data-target="#menu" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- collapsing navbar -->
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav">
+                <li class=" nav-item"><a class=" nav-link" href="{% url 'index' %}">Home</a></li>
+                <li class="nav-item"><a class=" nav-link" href="{% url 'menu' %}">Menus</a></li>
+                <li class="nav-item"><a class=" nav-link" href="{% url 'reservations' %}">Reservations</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'locations' %}">Locations</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact us</a></li>
+                <li class="nav-item"><a class=" nav-link" href="{% url 'giftcards' %}">Gift Cards</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--Block content -->
+    {% block content %}
+    {% endblock %}
+
+    <!-- Footer -->
+    <div class="footer"></div>
+</div>
+
+<!-- Jquery first , then Popper JS , then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+<!-- Load interactive scripts-->
+    <script src="{% static 'Js/src/orderButton.js' %}"></script>
+    <script src="{% static 'Js/src/hideReviewsButton.jss' %}"></script>
+</body>
+</html>
