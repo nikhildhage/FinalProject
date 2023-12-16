@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block customcss %}
+    <link rel="stylesheet" href="{% static 'css/form.css' %}" type="text/css">
+{% endblock %}
+{% block content %}
+    <form action="" class="form" id="form">
+      <h1 id="heading">Contact Us</h1><br />
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <label for="FirstName">FirstName: </label>
+            <input type="text" name="FirstName" value="" id="FirstName" class="form-control" />
+          </div>
+        </div>
+
+        <div class="col">
+          <label for="LastName">LastName: </label>
+          <input type="text" name="LastName" value="" id="LastName" class="form-control" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="Email">Email: </label>
+        <input type="email" name="Email" value="" id="Email" class="form-control" />
+      </div>
+
+      <div class="form-group">
+        <label for="PhoneNumber">Phone: </label>
+        <input type="tel" name="PhoneNumber" value="" id="PhoneNumber" class="form-control" />
+      </div>
+
+      <div class="form-group">
+        <label for="ReservationDate">Date: </label>
+        <input type="date" name="ReservationDate" value="" id="ReservationDate" class="form-control" />
+      </div>
+
+      <div class="form-group">
+        <textarea name="msg" placeholder="Notes" id="textArea" cols="55" rows="10"></textarea>
+
+        <p id="notes">
+          *Please book your reservation at least a week in advance. <br />Late
+          submissions are not accepted. <br />You will receive an email with
+          in 24 hours after we have processed your rservation.
+        </p>
+      </div>
+
+      <div class="form-group">
+        <button class="btn-warning" id="resetBtn">Reset</button>
+        <button class="btn-primary" type="submit" id="submitBtn">Submiut</button>
+      </div>
+    </form>
+{% endblock %}
+
+
+
+
+
+
