@@ -1,7 +1,7 @@
 import os
 
 from django.shortcuts import render
-from django.utils.dateparse import parse_date
+from django.utils.dateparse import parse_date, parse_time
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import *
 
@@ -27,12 +27,12 @@ def locations(request):
 def reservations(request):
     #  # Extracting  form data from reservation form
     if request.method == 'POST':
-        first_name = request.POST.get('myFName')
-        last_name = request.POST.get('myLName')
-        email = request.POST.get('myEmail')
-        phone_number = request.POST.get('myPhone')
-        arrival_date = parse_date(request.POST.get('myDate'))
-        nights = request.POST.get('myPhone')
+        first_name = request.POST.get('FirstName')
+        last_name = request.POST.get('LastName')
+        email = request.POST.get('Email')
+        phone_number = request.POST.get('PhoneNumber')
+        arrival_date = parse_date(request.POST.get('ReservationDate'))
+        arrival_time = parse_time(request.POST.get('ReservationTime'))
         comments = request.POST.get('myComments')
 
         # Create Reservation instance
@@ -42,7 +42,7 @@ def reservations(request):
             email=email,
             phone_number=phone_number,
             arrival_date=arrival_date,
-            nights=nights,
+            arrival_time=arrival_time,
             comments=comments
         )
         reservation.save()  # Save the reservation to the database
@@ -53,15 +53,15 @@ def reservations(request):
                 Name: {first_name} {last_name}<br>
                 Email: {email}<br>
                 Phone: {phone_number}<br>
-                Arrival Date: {arrival_date}<br>
-                Nights: {nights}<br>
+                Reservation Date: {arrival_date}<br>
+                Reservation Time: {arrival_time}<br>
                 Comments: {comments}
                 """
         try:
             message = Mail(
                 from_email='ndhage64.work@gmail.com',
                 to_emails=email,
-                subject='Pacific Trails Resort Reservation Confirmation for ' + first_name + last_name,
+                subject='Restaurant Reservation Confirmation for ' + first_name + last_name,
                 html_content=email_content)
             sg = SendGridAPIClient(os.getenv('SENDGRID_API_KEY'))
             response = sg.send(message)

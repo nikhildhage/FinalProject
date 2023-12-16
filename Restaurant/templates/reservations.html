@@ -6,6 +6,7 @@
 {% block content %}
      <!-- Reservation Form-->
    <form action="{% url 'reservations' %}" method="post" class="form" id="form">
+       {% csrf_token %}
       <h1 id="heading">Reservations</h1><br />
       <div class="row">
         <div class="col">
@@ -32,17 +33,23 @@
       </div>
 
       <div class="form-group">
-        <label for="ReservationDate">Date: </label>
+        <label for="ReservationDate">Reservation Date: </label>
         <input type="date" name="ReservationDate" value="" id="ReservationDate" class="form-control" />
       </div>
 
+       <div class="form-group">
+        <label for="ReservationTime">Reservation Time: </label>
+        <input type="time" name="ReservationTime" value="" id="ReservationTime" class="form-control" />
+      </div>
+
       <div class="form-group">
-        <textarea name="msg" placeholder="Notes" id="textArea" cols="120" rows="10"></textarea>
+          <label for="textArea">Comments: </label>
+        <textarea name="textArea" placeholder="Notes" id="textArea" cols="120" rows="10"></textarea>
 
         <p id="notes">
           *Please book your reservation at least a week in advance. <br />Late
           submissions are not accepted. <br />You will receive an email with
-          in 24 hours after we have proccessed your rservation.
+          in 24 hours after we have processed your reservation.
         </p>
       </div>
 
