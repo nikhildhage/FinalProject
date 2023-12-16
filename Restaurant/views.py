@@ -15,12 +15,12 @@ def index(request):
 
 
 def menu(request):
-    return render(request, "Menus.html")
+    return render(request, "menus.html")
 
 
 # Locations view
 def locations(request):
-    return render(request, "Locations.html")
+    return render(request, "locations.html")
 
 
 # Reservations View
@@ -70,14 +70,14 @@ def reservations(request):
             print(response.headers)
         except Exception as e:
             print(e.message)
-    return render(request, "Reservations.html")
+    return render(request, "reservations.html")
 
 
 # Activities View
 def giftcards(request):
-    return render(request, "GiftCard.html")
+    return render(request, "giftCard.html")
 
 
 # Details View
 def contact(request):
-    return render(request, "Contact.html")
+    return render(request, "contact.html")
