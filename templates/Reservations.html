@@ -5,7 +5,7 @@
 {% endblock %}
 {% block content %}
      <!-- Reservation Form-->
-    <form action="" class="form" id="form">
+   <form action="{% url 'reservations' %}" method="post" class="form" id="form">
       <h1 id="heading">Reservations</h1><br />
       <div class="row">
         <div class="col">
