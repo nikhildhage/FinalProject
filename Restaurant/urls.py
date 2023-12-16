@@ -4,8 +4,9 @@ from . import views
 # Pacific Trails Resort Urls
 urlpatterns = [
     path("", views.index, name="index"),
-    path("menu", views.yurts, name="menu"),
-    path("reservations", views.yurts, name="menu"),
-    path("giftCards", views.reservations, name="giftcard"),
-    path("contact", views.details, name="contact"),
+    path("menu", views.menu, name="menu"),
+    path("locations", views.locations, name="locations"),
+    path("reservations", views.reservations, name="reservations"),
+    path("giftcards", views.giftcards, name="giftcards"),
+    path("contact", views.contact, name="contact"),
 ]
