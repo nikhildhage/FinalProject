@@ -48,13 +48,14 @@ def reservations(request):
         reservation.save()  # Save the reservation to the database
 
         email_content = f"""
-                <strong>Your reservation has been confirmed.</strong><br><br>
-                Here are your reservation details:<br>
-                Name: {first_name} {last_name}<br>
-                Email: {email}<br>
-                Phone: {phone_number}<br>
-                Reservation Date: {arrival_date}<br>
-                Reservation Time: {arrival_time}<br>
+                <h1><strong>This is a Heading 1 with Bold Text</strong></h1><br><br>
+                Here are your reservation details:<br><br>
+                First Name: {first_name} <br><br>
+                Last Name :{last_name} <br><br>
+                Email: {email}<br><br>
+                Phone Number: {phone_number}<br><br>
+                Reservation Date: {arrival_date}<br><br>
+                Reservation Time: {arrival_time}<br><br>
                 Comments: {comments}
                 """
         try:
